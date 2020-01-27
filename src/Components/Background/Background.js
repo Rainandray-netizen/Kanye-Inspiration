@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from "react"
+import nasaKey from "../../nasaKey"
 import "./style.css"
 
 function Background(){
@@ -11,7 +12,7 @@ function Background(){
   }
 
   const fetchNasaApi = async () =>{
-    const response = await fetch(`https://api.nasa.gov/planetary/apod?date=201${7+randomThru(2)}-${randomThru(12)}-${randomThru(28)}&api_key=t3aaVafpNpyEBRcLoh2kXF5A92gZJbNB7NbfbM83`)
+    const response = await fetch(`https://api.nasa.gov/planetary/apod?date=201${7+randomThru(2)}-${randomThru(12)}-${randomThru(28)}&api_key=${nasaKey.key}`)
     const nextData = await response.json()
     updateNasaApi(nextData)
     setFetchCount(fetchCount + 1)
