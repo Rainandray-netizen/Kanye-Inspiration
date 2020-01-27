@@ -1,0 +1,11 @@
+img{
+    width:100vw;
+    height:100vh;
+}
+
+figure{
+    width:100vw;
+    height:100vh;
+    margin:0px;
+    position:absolute;
+}
